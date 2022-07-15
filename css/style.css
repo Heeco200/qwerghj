@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  transition: 1.5s;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -100%;
+  transition: 2s;
+}
+.navbar ul {
+  position: absolute;
+  top: 0;
+  display: block;
+  list-style: none;
+}
+.navbar ul li {
+  display: block;
+}
+.navbar ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+label, input {
+  display: none;
+}
+
+label {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: block;
+  margin: 20px;
+  cursor: pointer;
+  background-color: #0a697b;
+}
+
+label span {
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+label span:first-child {
+  transform-origin: left;
+  margin-top: 18px;
+}
+
+label span:last-child {
+  transform-origin: left;
+}
+
+input:checked ~ label span:first-child {
+  transform: rotate(45deg) translateY(-11px);
+}
+
+input:checked ~ label span:last-child {
+  transform: rotate(-45deg) translateY(11px);
+}
+
+input:checked ~ label span:nth-child(2) {
+  opacity: 0;
+}
+
+.container.active {
+  background-color: #0a697b;
+  transition: 1.5s;
+}
+
+.container.active .navbar {
+  left: -1%;
+  transition: 2s;
+}/*# sourceMappingURL=style.css.map */
